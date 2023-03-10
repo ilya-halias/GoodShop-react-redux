@@ -1,0 +1,1 @@
+export {MenuGoods} from "./menu"

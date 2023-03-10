@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.inputSearch {
+   max-width: 1000px;
+}
+
+.searchButton {
+    max-width: 100px;
+}
+
+.basket {
+    display: inline-block;
+    vertical-align: top;
+    color: #cd4500;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}

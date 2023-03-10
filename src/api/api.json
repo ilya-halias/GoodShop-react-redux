@@ -1,0 +1,906 @@
+[
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "1",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт 1",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "2",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "3",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "4",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "5",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "6",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "7",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "8",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "9",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "products",
+    "description": "Правильное питание",
+    "id": "10",
+    "img": "https://source.unsplash.com/random",
+    "label": "Продукт",
+    "price": "23,45р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "11",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "12",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "13",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "14",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "15",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "16",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "17",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "18",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "19",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "cosmetics",
+    "description": "Лучшая косметика",
+    "id": "20",
+    "img": "https://source.unsplash.com/random",
+    "label": "Косметика",
+    "price": "25,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "21",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "22",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "23",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "24",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "25",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "26",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "27",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "28",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "29",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "fun",
+    "description": "Настольная игра",
+    "id": "30",
+    "img": "https://source.unsplash.com/random",
+    "label": "Монополия",
+    "price": "18,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "31",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "32",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "33",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "34",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "35",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "36",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "37",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "38",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "39",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "souvenirs",
+    "description": "Из Египта",
+    "id": "40",
+    "img": "https://source.unsplash.com/random",
+    "label": "Пирамида",
+    "price": "10,00р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "41",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "42",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "43",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "44",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "45",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "46",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "47",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "48",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "49",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "appliances",
+    "description": "Лучший в своей линейке",
+    "id": "50",
+    "img": "https://source.unsplash.com/random",
+    "label": "Samsung A73",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "51",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "52",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "153",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "53",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "54",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "55",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "56",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "57",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "58",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "home",
+    "description": "Яркий",
+    "id": "59",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "60",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "61",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "62",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "63",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "163",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "64",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "65",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "66",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "67",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "books",
+    "description": "Яркий",
+    "id": "68",
+    "img": "https://source.unsplash.com/random",
+    "label": "Книга",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "69",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "70",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "71",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "72",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "73",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "74",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "75",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "76",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "77",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "78",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "children",
+    "description": "Яркий",
+    "id": "79",
+    "img": "https://source.unsplash.com/random",
+    "label": "Дети",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "80",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "81",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "82",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "83",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "84",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "85",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "86",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "87",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "88",
+    "img": "https://source.unsplash.com/random",
+    "label": "Офис",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "89",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "office",
+    "description": "Яркий",
+    "id": "90",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "91",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "92",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "93",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "94",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "95",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "96",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "97",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "98",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "99",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "100",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "sport",
+    "description": "Яркий",
+    "id": "101",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "102",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "103",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "104",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "105",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "106",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "107",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "108",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "109",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "110",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  },
+  {
+    "categoryTypeId": "health",
+    "description": "Яркий",
+    "id": "111",
+    "img": "https://source.unsplash.com/random",
+    "label": "Светильник",
+    "price": "1080р"
+  }
+]
