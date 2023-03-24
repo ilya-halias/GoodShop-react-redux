@@ -7,7 +7,10 @@ interface LoaderProps {
 
 export const Loader: FC<LoaderProps> = ({ isLoading }) =>
     isLoading ? (
-        <div className={css.lds_circle}>
+        <div className={css.lds_ellipsis}>
+            <div></div>
+            <div></div>
+            <div></div>
             <div></div>
         </div>
     ) : null;

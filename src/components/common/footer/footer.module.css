@@ -1,4 +1,6 @@
 .footer {
-    padding-top: 200px;
-    background-color: aqua;
+    padding-top: 100px;
+    background-color: darkblue;
+    text-align: center;
+    align-self: center;
 }

@@ -3,39 +3,21 @@ import selection from "../../../img/selection.jpg"
 import textbook from "../../../img/textbooks.jpg"
 import css from "./carousel.module.css"
 import {Carousel} from "antd";
-import {Link} from "react-router-dom";
-import {FC} from "react";
-import {Category} from "../../../types";
-import api from "../../../api/api.json"
+import {Slide} from "./slide";
 
-
+const slideArr = [
+    {id: "1" ,label: "Книги", img: books , alt: "books", btn: "Выбрать товары", type: "books"},
+    {id:"2", label: "Сувениры, галантерея", img: selection, alt: "selection", btn: "Выбрать товары", type: "souvenirs" },
+    {id:"3", label: "Детям и мамам", img: textbook, alt: "textbook",  btn: "Выбрать товары", type: "children"}
+]
 export const CarouselGoods = () =>{
     return (
+        <div className={css.carousel}>
             <Carousel autoplay dots={false}>
-                <Link to={`/categories/books`}>
-                <div className={css.carousel}>
-                    <h1 className={css.banner}>Книги </h1>
-                    <button className={css.buttonCarousel}>Выбрать товары</button>
-                    <img src={books} alt={'books'} className={css.img}/>
-                </div>
-                </Link>
-                <Link to={`/categories/souvenirs`}>
-                <div className={css.carousel}>
-                    <h1 className={css.banner}>Сувениры, галантерея</h1>
-                    <button className={css.buttonCarousel}>Выбрать товары</button>
-                    <img src={selection} alt={'selection'} className={css.img}/>
-                </div>
-                </Link>
-                    <Link to={`/categories/children`}>
-                <div className={css.carousel}>
-                    <h1 className={css.banner}>Детям и мамам</h1>
-                    <button className={css.buttonCarousel}>Выбрать товары</button>
-                    <img src={textbook} alt={'textbook'} className={css.img}/>
-                </div>
-                    </Link>
+                {slideArr.map((item )=><Slide key = {item.id} id={item.id} label={item.label} img={item.img} alt={item.img} btn={item.btn} type={item.type}/>)}
             </Carousel>
 
-
+        </div>
     )
 }
 

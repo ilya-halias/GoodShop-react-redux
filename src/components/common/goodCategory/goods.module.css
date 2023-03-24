@@ -16,6 +16,11 @@
 
 }
 .wrapper{
+    max-width: 1440px;
     /*background-color: aquamarine;*/
     margin-top: 25px;
+}
+
+.goodCard {
+    max-width: 270px;
 }

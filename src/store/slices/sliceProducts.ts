@@ -1,48 +1,35 @@
-
-import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit"
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {Good, LOAD_STATUSES} from "../../types";
-import {getProducts, } from "../../api";
 
+import {getProducts} from "../api";
 
-
-
-export const fetchProducts = createAsyncThunk("products", getProducts)
-
+const SLICE_NAME = "categories";
+export const fetchProducts = createAsyncThunk(SLICE_NAME, getProducts)
 export interface Store {
-    data: Good[]
-    loadStatus: LOAD_STATUSES
-
+  data: Good[];
+  loadStatus: string;
 }
-
-
 
 const initialState: Store = {
+  loadStatus: LOAD_STATUSES.UNKNOWN,
+  data: [],
+};
 
-    loadStatus: LOAD_STATUSES.UNKNOWN,
-    data:  []
+export const { reducer, actions } = createSlice({
+  name: 'products',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchProducts.pending, (store) => {
+      store.loadStatus = LOAD_STATUSES.LOADING;
+    });
+    builder.addCase(fetchProducts.fulfilled, (store, action) => {
+      store.loadStatus = LOAD_STATUSES.LOADED;
+      store.data = action.payload ? action.payload.items : store.data ;
 
-}
-
-export const {reducer, actions} = createSlice({
-    name: "products",
-    initialState,
-    reducers: {},
-    extraReducers: (builder) => {
-        builder.addCase(fetchProducts.pending, (store)=>{
-            store.loadStatus = LOAD_STATUSES.LOADING
-        });
-        builder.addCase(fetchProducts.fulfilled, (store, action)=>{
-            store.loadStatus = LOAD_STATUSES.LOADED
-            store.data = action.payload;
-
-        });
-        builder.addCase(fetchProducts.rejected, (store)=>{
-            store.loadStatus = LOAD_STATUSES.ERROR
-
-        });
-
-    }
-
-})
-
-export const actionsCategories = { fetchProducts }
+    });
+    builder.addCase(fetchProducts.rejected, (store) => {
+      store.loadStatus = LOAD_STATUSES.ERROR;
+    });
+  },
+});

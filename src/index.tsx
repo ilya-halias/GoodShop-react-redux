@@ -3,6 +3,7 @@ import { App } from './components/App';
 import { BrowserRouter } from "react-router-dom"
 import {store} from "./store";
 import {Provider} from "react-redux";
+import  "./server"
 
 ReactDOM
   .createRoot(document.getElementById('root') as HTMLElement)

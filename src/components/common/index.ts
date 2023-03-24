@@ -4,7 +4,7 @@ export {MenuGoods} from "./menu"
 export {GoodCategory} from "./goodCategory"
 export {Footer} from "./footer"
 export {MainPage} from "./mainPage"
-export {NotFound} from "./notFounde"
-export {Sort} from "./sort";
+export {NotFound} from "./notFound"
+export {CategoryPage} from "./categoryPage";
 export {ProductCard} from "./productCard"
 export {Loader} from "./loader"
