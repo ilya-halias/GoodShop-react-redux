@@ -1,0 +1,9 @@
+.sort{
+    display: flex;
+    margin: 15px 25px;
+    justify-content: space-between;
+}
+.searchAdmin{
+    margin: 25px;
+    width: 600px;
+}

@@ -4,6 +4,8 @@ import css from "../styles.module.css"
 import {Registration} from "./registration";
 import {LoginPage} from "./loginPage";
 import {useAppSelector} from "../store/hooks";
+import {GoodsPage} from "./goodsPage";
+import {Basket} from "./basket"
 
 
 
@@ -19,9 +21,12 @@ export const App = () => {
                 <Route path="" element={<MainPage/>}/>
                 <Route path={"/registration"} element={<Registration/>}/>
                 <Route path={"/login"} element={<LoginPage/>}/>
+                <Route path={"/basket"} element={<Basket/>}/>
                 <Route path={"/product/:id"} element={<ProductCard/>}/>
                 <Route path={"/categories/:category"} element={<CategoryPage/>}/>
+                <Route path={"/goods"} element={<GoodsPage/>}/>
                 <Route path="*" element={<NotFound/>}/>
+
             </Routes>
             {alerts.length > 0 && alerts.map((item)=> <p key={item} style={{position: 'fixed', top: 0, fontSize: '20px', color: 'red'}}>{item}</p>)}
             <Footer/>

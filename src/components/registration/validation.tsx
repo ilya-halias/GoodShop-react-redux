@@ -1,7 +1,7 @@
 import * as yup from "yup";
 
 const validationSchema = yup.object().shape({
-  firstName: yup
+  name: yup
     .string()
     .typeError("Должно содержать только буквы")
     .required("Обязательное поле")
@@ -10,7 +10,7 @@ const validationSchema = yup.object().shape({
       "Должно быть более двух символов",
       (val) => val.toString().length > 2
     ),
-  secondName: yup
+  surname: yup
     .string()
     .typeError("Должна содержать только буквы")
     .test("len", "Должна быть более двух символов", (val) => {
@@ -30,21 +30,21 @@ const validationSchema = yup.object().shape({
     .string()
     .oneOf([yup.ref("password")], "Пароли не совпадают")
     .required("Обязательное поле")
-    .test("len", "Должно быть не менее 6 символов*", (val) => {
+    .test("len", "Должно быть не менее 6 символов", (val) => {
       if (val) return val.toString().length >= 6;
     }),
-  favoriteCategories: yup
+  interests: yup
     .array()
     .test("minSelected", "Выберите минимум 2 значения", (value) => {
       return value && value.filter((val) => val).length >= 2;
     }),
-  birthDate: yup.date().min("1930-01-01"),
+  bornAt: yup.date().min("1930-01-01"),
   reply: yup.string().required("Введите ответ на вопрос"),
 });
 export const registrationData: DataRegistrationType = {
   fields: [
-    { name: "firstName", label: "Имя", type: "text", css: "input" },
-    { name: "secondName", label: "Фамилия", type: "text", css: "input" },
+    { name: "name", label: "Имя", type: "text", css: "input" },
+    { name: "surname", label: "Фамилия", type: "text", css: "input" },
     { name: "email", label: "Электронная почта", type: "email", css: "input" },
     { name: "password", label: "Пароль", type: "password", css: "input" },
     {
@@ -69,15 +69,15 @@ export const registrationData: DataRegistrationType = {
     },
   ],
   initialValues: {
-    firstName: "",
-    secondName: "",
+    name: "",
+    surname: "",
     password: "",
     confirmPassword: "",
     email: "",
     gender: 1,
-    favoriteCategories: [],
-    subscribeNews: true,
-    birthDate: "",
+    interests: [],
+    isSubscribe: true,
+    bornAt: "",
     secretQuestion: "",
     reply: "",
   },
@@ -85,23 +85,23 @@ export const registrationData: DataRegistrationType = {
 };
 
 type InitialValuesDataType = {
-  firstName: string;
-  secondName: string;
+  name: string;
+  surname: string;
   password: string;
   confirmPassword: string;
   email: string;
   gender: number;
-  favoriteCategories: string[];
-  subscribeNews: boolean;
-  birthDate: string;
+  interests: string[];
+  isSubscribe: boolean;
+  bornAt: string;
   secretQuestion: string;
   reply: string;
 };
 
 type FieldDataType = {
   name:
-    | "firstName"
-    | "secondName"
+    | "name"
+    | "surname"
     | "password"
     | "confirmPassword"
     | "email"
@@ -118,3 +118,14 @@ type DataRegistrationType = {
   initialValues: InitialValuesDataType;
   validation: any;
 };
+
+export const registrationFields = [
+  "name",
+  "surname",
+  "email",
+  "password",
+  "gender",
+  "interests",
+  "isSubscribe",
+  "bornAt",
+];

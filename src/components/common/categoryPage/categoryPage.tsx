@@ -1,5 +1,5 @@
 import { Category, Good, LOAD_STATUSES } from "../../../types";
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import { GoodCategory } from "../goodCategory";
 
 import {
@@ -25,6 +25,7 @@ export const CategoryPage = () => {
 
   useEffect(() => {
     dispatch(fetchCategories());
+    window.scrollTo(0, 0)
   }, []);
 
   const sort = useMemo(() => {
@@ -46,6 +47,8 @@ export const CategoryPage = () => {
     );
   }
   {
-    return <Loader isLoading={loadStatusProducts === LOAD_STATUSES.LOADING} />;
-  }
+    return <Loader isLoading={loadStatusProducts === LOAD_STATUSES.LOADING}/>
+        && <h2> Категория не найдена, перейдите в главное меню по ссылке:<Link to=" ">Вернуться на главную</Link></h2>
+  }  ;
+
 };

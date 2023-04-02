@@ -17,7 +17,7 @@ export const MenuGoods = () => {
             <ul className={css.categories}>
                 {categories.map((category) =>(
                     <Link to={`/categories/${category.type}`} key={category.id} className={css.category}>
-                        <li> {category.label}</li>
+                        <li className={css.elementMenu}> {category.label}</li>
                     </Link>
                     )
                 )}

@@ -1,0 +1,20 @@
+.basket{
+    margin: 25px;
+}
+
+.goodInBasket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  margin: 20px;
+}
+
+.groupCount{
+    display: flex;
+    justify-content: space-between;
+}
+
+.count{
+    padding:  5px 7px;
+    font-size: 20px;
+}

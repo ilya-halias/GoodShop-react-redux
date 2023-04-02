@@ -4,7 +4,7 @@ import { getCategories } from "../api";
 
 const SLICE_NAME = "categories";
 
-export const fetchCategories = createAsyncThunk(SLICE_NAME, getCategories);
+export const fetchCategories = createAsyncThunk(`${SLICE_NAME}/fetchCategories`, getCategories);
 
 export interface GoodsStore {
   loadStatus: string;

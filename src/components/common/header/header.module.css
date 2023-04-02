@@ -11,7 +11,7 @@
 }
 
 .inputSearch {
-   max-width: 1000px;
+   width: 1000px;
 }
 
 .searchButton {
@@ -25,4 +25,12 @@
     text-decoration: none;
     font-size: 22px;
     font-weight: bold;
+}
+.searchAdmin{
+    width: 700px;
+}
+.commonCount{
+    margin: 0 0 2px 1px;
+    font-weight: 800;
+    font-size: 18px;
 }

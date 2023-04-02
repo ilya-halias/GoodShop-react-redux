@@ -4,7 +4,7 @@ import { getPopularCategories} from "../api";
 
 const SLICE_NAME = "popularCategories";
 
-export const fetchPopularCategories = createAsyncThunk(SLICE_NAME, getPopularCategories);
+export const fetchPopularCategories = createAsyncThunk(`${SLICE_NAME}/fetchPopularCategories`, getPopularCategories);
 
 export interface PopularGoodsStore {
     loadStatus: string,

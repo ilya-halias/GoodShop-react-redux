@@ -6,9 +6,12 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { getCategorySelector } from "../../store";
 import { fetchCategories } from "../../store/slices/sliceCategory";
-import { registrationData } from "./validation";
+import { registrationData, registrationFields } from "./validation";
+import { registrationUserData } from "../../store/slices/sliceUser";
+import { useNavigate } from "react-router-dom";
 
 export const Registration = () => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchCategories());
@@ -24,7 +27,22 @@ export const Registration = () => {
         validateOnChange={false}
         onSubmit={(values, { resetForm }) => {
           console.log(values);
+          const data = Object.keys(values).reduce((acc: {}, key: string) => {
+            if (registrationFields.includes(key)) {
+              // @ts-ignore
+              acc[key] = values[key];
+            }
+            return acc;
+          }, {});
+          dispatch(
+            registrationUserData({
+              ...data,
+              login: values.email,
+              secret: { type: values.secretQuestion, answer: values.reply },
+            })
+          );
           resetForm();
+          navigate("/login") ;
         }}
         validationSchema={registrationData.validation}
       >
@@ -44,7 +62,9 @@ export const Registration = () => {
                     onChange={handleChange}
                     value={values[field.name]}
                   />
-                    {errors[field.name] && <p className={css.error}>{errors[field.name]}</p>}
+                  {errors[field.name] && (
+                    <p className={css.error}>{errors[field.name]}</p>
+                  )}
                 </div>
               ))}
             </div>
@@ -59,16 +79,16 @@ export const Registration = () => {
                 <Radio value={2}>Женский</Radio>
               </Radio.Group>
             </div>
-            <div className={css.favoriteCategories}>
+            <div className={css.interests}>
               <span>Выберите любимые категории</span>
               <br />
-              <div id={css.favoriteCategoriesList}>
+              <div id={css.interestsList}>
                 <>
                   {categories.map((category) => (
                     <label key={category.id}>
                       <Field
                         type="checkbox"
-                        name="favoriteCategories"
+                        name="interests"
                         value={category.label}
                         onChange={handleChange}
                       />
@@ -79,28 +99,28 @@ export const Registration = () => {
                   ))}
                 </>
               </div>
-              {errors.favoriteCategories && (
-                <p className={css.error}>{errors.favoriteCategories}</p>
+              {errors.interests && (
+                <p className={css.error}>{errors.interests}</p>
               )}
             </div>
 
-            <div className={css.subscribeNews}>
-              <label htmlFor={"subscribeNews"}> Подписаться на новости </label>
+            <div className={css.isSubscribe}>
+              <label htmlFor={"isSubscribe"}> Подписаться на новости </label>
               <Switch
-                checked={values.subscribeNews}
+                checked={values.isSubscribe}
                 className={css.switchButton}
-                onChange={(value) => setFieldValue("subscribeNews", value)}
+                onChange={(value) => setFieldValue("isSubscribe", value)}
               />
             </div>
 
-            <div className={css.birthDate}>
-              <label htmlFor={"birthDate"}> Дата рождения</label> <br />
+            <div className={css.bornAt}>
+              <label htmlFor={"bornAt"}> Дата рождения</label> <br />
               <Input
                 className={css.input}
                 type={"date"}
-                name={"birthDate"}
+                name={"bornAt"}
                 onChange={handleChange}
-                value={values.birthDate}
+                value={values.bornAt}
                 min="1930-01-01"
               />
             </div>
@@ -146,7 +166,7 @@ export const Registration = () => {
             ))}
 
             <div className={css.buttonSubmitForm}>
-              <Button className={css.registrationBtn} htmlType="submit" >
+              <Button className={css.registrationBtn} htmlType="submit">
                 Зарегистрироваться
               </Button>
             </div>
