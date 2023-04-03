@@ -8,7 +8,10 @@ const getData = (url: string, params = {}) => {
 
   fullUrl.search = searchParams.toString();
 
-  return fetch(fullUrl).then((data) => {
+  return fetch(fullUrl, {  headers: {
+      "Content-Type": "application/json", Authorization: ` Bearer ${token}`
+    },}).then((data) => {
+
     if (data.ok) {
       return data.json();
     }
@@ -22,13 +25,16 @@ const postData = (url: string, body: any) => {
   return fetch(fullUrl, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json", Authorization: ` Bearer ${token}`
     },
     body: JSON.stringify(body),
   })
     .then((data) => {
       if (data.ok) {
         return data.json();
+      }
+      else if (data.status === 404){
+        localStorage.setItem("error", '404')
       }
     })
     .then((response) => {
@@ -41,7 +47,7 @@ const postBasket = (url: string, body: Record<string, unknown>) => {
   return fetch(new URL(url, BASE_URL), {
     method: "PUT",
     body: JSON.stringify(body),
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json" ,  Authorization: ` Bearer ${token}` },
   }).then((data) => {
     if (data.ok) {
       return data.json();
@@ -62,11 +68,13 @@ export const getCategories = (): Promise<{ categories: Category[] }> =>
 
 export const postUserData = (body: any): Promise<any> =>
   postData("/api/registration", body);
-export const loginData = (credentials: {
+
+export const loginPostData = (credentials: {
   login: string;
   password: string;
-}): Promise<{ login: string; token: string }> =>
+}): Promise<{ login: string; token: string; status?: string }> =>
   postData("/api/login", credentials);
+
 
 export const getPopularCategories = (): Promise<
   { category: Category; items: Good[] }[]

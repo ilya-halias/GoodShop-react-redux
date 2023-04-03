@@ -1,13 +1,67 @@
+
+.gender{
+    margin: 20px;
+}
+
 .input {
     max-width: 600px;
 }
-.form span {
-    margin: 10px;
-}
 
-.form label{
-    margin: 10px;
-}
 .error {
     color: #cd4500;
+}
+
+.label{
+    font-size: 20px;
+    margin:10px 15px;
+}
+.informationBlock{
+    display: flex;
+    flex-direction: column;
+}
+
+.categories{
+    font-size: 15px;
+    margin: 10px;
+}
+.categories label{
+    margin: 15px;
+}
+
+.radioGender{
+    font-size: 18px;
+}
+
+.interests{
+    font-size: 25px;
+    margin: 15px;
+}
+.categoriesLabel{
+    font-size: 20px;
+    margin: 10px;
+}
+.labelInterests{
+    font-size: 25px;
+}
+
+.labelSubscribe{
+    margin: 20px 10px;
+    font-size: 22px;
+
+}
+
+.labelbornAt{
+    margin-top: 15px;
+    font-size: 25px;
+}
+.bornAt{
+    margin: 15px;
+    font-size: 18px;
+}
+
+.registrationBtn{
+
+    height: 40px;
+    font-size: 18px;
+    margin: 20px;
 }

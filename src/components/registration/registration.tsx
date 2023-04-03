@@ -26,7 +26,6 @@ export const Registration = () => {
         validateOnBlur={false}
         validateOnChange={false}
         onSubmit={(values, { resetForm }) => {
-          console.log(values);
           const data = Object.keys(values).reduce((acc: {}, key: string) => {
             if (registrationFields.includes(key)) {
               // @ts-ignore
@@ -47,12 +46,12 @@ export const Registration = () => {
         validationSchema={registrationData.validation}
       >
         {({ values, errors, handleSubmit, handleChange, setFieldValue }) => (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} >
             <div className={css.form}>
               {registrationData.fields.map((field) => (
                 <div key={field.name} className={css.informationBlock}>
                   {field.label && (
-                    <label htmlFor={field.name}>{field.label}</label>
+                    <label className={css.label} htmlFor={field.name}>{field.label}</label>
                   )}
 
                   <Input
@@ -69,28 +68,28 @@ export const Registration = () => {
               ))}
             </div>
             <div className={css.gender}>
-              <label htmlFor={"gender"}> Ваш пол</label> <br />
+              <label className={css.label} htmlFor={"gender"}> Ваш пол</label> <br />
               <Radio.Group
                 onChange={handleChange}
                 value={values.gender}
                 name={"gender"}
               >
-                <Radio value={1}>Мужской</Radio>
-                <Radio value={2}>Женский</Radio>
+                <Radio className={css.radioGender} value={1}>Мужской</Radio>
+                <Radio className={css.radioGender} value={2}>Женский</Radio>
               </Radio.Group>
             </div>
             <div className={css.interests}>
-              <span>Выберите любимые категории</span>
+              <label className={css.labelInterests}>Выберите любимые категории</label>
               <br />
               <div id={css.interestsList}>
                 <>
                   {categories.map((category) => (
-                    <label key={category.id}>
+                    <label className={css.categoriesLabel} key={category.id}>
                       <Field
                         type="checkbox"
                         name="interests"
                         value={category.label}
-                        onChange={handleChange}
+                        onChange={handleChange}gjl
                       />
                       <span className={css.checkboxLabel}>
                         {category.label}
@@ -105,7 +104,7 @@ export const Registration = () => {
             </div>
 
             <div className={css.isSubscribe}>
-              <label htmlFor={"isSubscribe"}> Подписаться на новости </label>
+              <label className={css.labelSubscribe} htmlFor={"isSubscribe"}> Подписаться на новости </label>
               <Switch
                 checked={values.isSubscribe}
                 className={css.switchButton}
@@ -114,7 +113,7 @@ export const Registration = () => {
             </div>
 
             <div className={css.bornAt}>
-              <label htmlFor={"bornAt"}> Дата рождения</label> <br />
+              <label className={css.labelbornAt} htmlFor={"bornAt"}> Дата рождения</label> <br />
               <Input
                 className={css.input}
                 type={"date"}
@@ -131,7 +130,7 @@ export const Registration = () => {
                   values.secretQuestion && (
                     <div className={css.informationBlock}>
                       {field.label && (
-                        <label htmlFor={field.name}>{field.label}</label>
+                        <label className={css.label} htmlFor={field.name}>{field.label}</label>
                       )}
                       <Input
                         className={css[field.css]}
@@ -148,7 +147,7 @@ export const Registration = () => {
                 ) : (
                   <div className={css.informationBlock}>
                     {field.label && (
-                      <label htmlFor={field.name}>{field.label}</label>
+                      <label className={css.label} htmlFor={field.name}>{field.label}</label>
                     )}
                     <Input
                       className={css[field.css]}
@@ -169,6 +168,7 @@ export const Registration = () => {
               <Button className={css.registrationBtn} htmlType="submit">
                 Зарегистрироваться
               </Button>
+                <Button className={css.registrationBtn} onClick={()=>navigate("/")}> Отмена</Button>
             </div>
           </form>
         )}

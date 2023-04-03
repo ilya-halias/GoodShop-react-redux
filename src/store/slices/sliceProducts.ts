@@ -7,16 +7,16 @@ const SLICE_NAME = "products";
 export const fetchProducts = createAsyncThunk(`${SLICE_NAME}/fetchProducts`, getProducts)
 export interface Store {
   data: Good[];
-  loadStatus: string;
+  loadStatus: LOAD_STATUSES;
   total: number
-  text: string
+
 }
 
 const initialState: Store = {
   loadStatus: LOAD_STATUSES.UNKNOWN,
   data: [],
   total: 1,
-  text:""
+
 };
 
 export const { reducer, actions } = createSlice({

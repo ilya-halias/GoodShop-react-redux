@@ -9,7 +9,7 @@ import * as jose from 'jose'
 const APP_CONFIG = {
     DEFAULT_RESPONSE_DELAY: 0,
     TOKEN_TTL: '24h',
-    USE_AUTH_CHECK: false,
+    USE_AUTH_CHECK: true,
     LOG_BE_ERRORS: true,
 }
 

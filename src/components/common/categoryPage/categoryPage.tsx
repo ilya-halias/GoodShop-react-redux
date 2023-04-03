@@ -32,7 +32,7 @@ export const CategoryPage = () => {
     if(category) {
       return categories.find((item) => item.type === category);
     }
-  }, [category]);
+  }, [category, categories]);
 
 
   useEffect(() => {
@@ -43,12 +43,14 @@ export const CategoryPage = () => {
 
   if (products && sort) {
     return (
+        <>
       <GoodCategory items={products} type={sort.type} label={sort.label} />
+            </>
     );
   }
   {
-    return <Loader isLoading={loadStatusProducts === LOAD_STATUSES.LOADING}/>
+    return <> <Loader isLoading={loadStatusProducts === LOAD_STATUSES.LOADING}/>
         && <h2> Категория не найдена, перейдите в главное меню по ссылке:<Link to=" ">Вернуться на главную</Link></h2>
-  }  ;
+    </>  }  ;
 
 };

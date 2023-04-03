@@ -10,10 +10,9 @@ import {Basket} from "./basket"
 
 
 export const App = () => {
-    const alerts = useAppSelector(state => state.alerts.data)
-    const variant = {
-        success: {color: 'green', text: 'Ура!'}
-    }
+
+
+
     return (
         <>
             <Header/>
@@ -28,7 +27,6 @@ export const App = () => {
                 <Route path="*" element={<NotFound/>}/>
 
             </Routes>
-            {alerts.length > 0 && alerts.map((item)=> <p key={item} style={{position: 'fixed', top: 0, fontSize: '20px', color: 'red'}}>{item}</p>)}
             <Footer/>
         </>
 

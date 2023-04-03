@@ -31,7 +31,7 @@ export const { reducer, actions } = createSlice({
         });
         builder.addCase(registrationUserData.fulfilled, (state, action) => {
             state.loadStatus = LOAD_STATUSES.LOADED;
-            console.log(action.payload)
+
 
         });
     },

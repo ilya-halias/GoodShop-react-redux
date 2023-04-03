@@ -21,7 +21,7 @@ export const fetchAddGoodInBasket = createAsyncThunk(
 export interface State {
   goodInBasket: GoodInBasket[];
   commonCount: number;
-  loadStatus: string;
+  loadStatus: LOAD_STATUSES;
 }
 
 const initialState: State = {

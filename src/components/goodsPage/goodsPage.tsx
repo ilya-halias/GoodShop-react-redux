@@ -6,6 +6,7 @@ import {
   getCategorySelector,
   getIsAuthSelector,
   getLoadStatusProducts,
+  getLoginSelector,
   getProductsSelector,
   getTotalSelector,
 } from "../../store";
@@ -16,28 +17,41 @@ import { fetchCategories } from "../../store/slices/sliceCategory";
 import debounce from "lodash/debounce";
 import { useNavigate } from "react-router-dom";
 import css from "./goodPage.module.css";
+import { number } from "yup";
+import { Good } from "../../types";
 
 export const GoodsPage = () => {
   const isAuth = useAppSelector(getIsAuthSelector);
   const goods = useAppSelector(getProductsSelector);
   const total = useAppSelector(getTotalSelector);
   const categories = useAppSelector(getCategorySelector);
+  const loginName = useAppSelector(getLoginSelector);
 
   const optionsCategories = categories?.map((category) => ({
     value: category.id,
     label: category.label,
   }));
-
+  type Params = {
+    page: number;
+    limit: number;
+    offset: number;
+    text: string;
+    categoryTypeIds: string;
+    minPrice: number;
+    maxPrice: number;
+    sortBy: keyof Good;
+    sortDirection: "asc" | "desc";
+  };
 
   const dispatch = useAppDispatch();
   const loadStatusProducts = useAppSelector(getLoadStatusProducts);
   const { Search } = Input;
-  const [params, setParams] = useState({
+  const [params, setParams] = useState<Params>({
     page: 1,
     limit: 20,
     offset: 0,
     text: "",
-    categoryTypeIds: "1,2,3,4,5,6,7,8,9,10,11",
+    categoryTypeIds: "0",
     minPrice: 0,
     maxPrice: 1000,
     sortBy: "price",
@@ -60,7 +74,6 @@ export const GoodsPage = () => {
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
-
 
   const dataSource = (goods || []).map((good) => ({ ...good, key: good.id }));
   const columns = [
@@ -103,17 +116,25 @@ export const GoodsPage = () => {
     console.log(values);
   };
 
-  const handlerSort = (value: "asc" | "desc") => {
-    setParams((prevParams) => ({
-      ...prevParams,
-      sortDirection: value,
-      sortBy: "price",
-    }));
+  const handlerSort = (value: string) => {
+    if (value === "Сортировать по убыванию цены") {
+      setParams((prevParams: Params) => ({
+        ...prevParams,
+        sortDirection: "desc",
+        sortBy: "price",
+      }));
+    } else {
+      setParams((prevParams: Params) => ({
+        ...prevParams,
+        sortDirection: "asc",
+        sortBy: "price",
+      }));
+    }
   };
 
-  const optionsSort: {value:("asc" | "desc"), label: string }[] = [
-    { value: "desc", label: "Сортировать по убыванию цены" },
-    { value: "asc", label: "Сортировать по увеличению цены" },
+  const optionsSort = [
+    { label: "Сортировать по убыванию цены" },
+    { label: "Сортировать по увеличению цены" },
   ];
 
   const navigate = useNavigate();
@@ -122,11 +143,19 @@ export const GoodsPage = () => {
   };
   console.log("params.sortDirection", params.sortDirection);
 
+  useEffect(() => {
+    const { categoryTypeIds, ...restParams } = params;
+    fetchProductsDebounced({
+      ...restParams,
+      ...(categoryTypeIds !== "0" && { categoryTypeIds }),
+    });
+  }, [params]);
+
   const resetParams = () => {
     setParams((prevParams) => ({
       ...prevParams,
       text: "",
-      categoryTypeIds: "1,2,3,4,5,6,7,8,9,10,11",
+      categoryTypeIds: "0",
       minPrice: 0,
       maxPrice: 1000,
       sortBy: "price",
@@ -134,12 +163,10 @@ export const GoodsPage = () => {
       offset: 0,
     }));
   };
-  if (loadStatusProducts === LOAD_STATUSES.LOADED) {
-    // if(true) {
+
+  if (loadStatusProducts === LOAD_STATUSES.LOADED && loginName === "admin") {
     return (
       <div>
-        {/*{!isAuth && <p className={css.textAdmin}>Вы не вошли как администратор, пожалуйста авторизируйтесь</p>}*/}
-        {/*{isAuth &&*/}
         <div>
           <Search
             className={css.searchAdmin}
@@ -153,7 +180,11 @@ export const GoodsPage = () => {
               style={{ width: 400 }}
               defaultValue={"Все товары"}
               // value={categories?.map((category) => ( category.label))}
-              value={params.categoryTypeIds}
+              value={
+                params.categoryTypeIds === "0"
+                  ? " Выбрать категорию"
+                  : params.categoryTypeIds
+              }
             />
             <Slider
               style={{ width: 400 }}
@@ -165,12 +196,22 @@ export const GoodsPage = () => {
             <Select
               style={{ width: 400 }}
               onChange={handlerSort}
-              options={optionsSort}
-              // value={"desc"|| "asc"}
+              options={(optionsSort || []).map((option) => ({
+                key: option.label,
+                value: option.label,
+                label: option.label,
+              }))}
+              value={
+                params.sortDirection === "asc"
+                  ? "Сортировать по увеличению цены"
+                  : "Сортировать по убыванию цены"
+              }
             />
           </div>
           <div className={css.reset}>
-            <Button onClick={resetParams}>Сбросить параметры</Button>
+            <Button className={css.resetForm} onClick={resetParams}>
+              Сбросить параметры
+            </Button>
           </div>
 
           <Table

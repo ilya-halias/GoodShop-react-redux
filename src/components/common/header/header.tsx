@@ -24,6 +24,7 @@ export const Header = () => {
     localStorage.setItem("user", "");
     window.location.reload();
   };
+
   return (
     <div>
       <header className={css.header}>
@@ -35,6 +36,7 @@ export const Header = () => {
         </div>
 
         {isAuth && <Button onClick={exit} className={css.login}>Выйти</Button>}
+        {isAuth && <span> {loginName}</span>}
         {!isAuth && <Link to={"/login"}>
           <Button className={css.login}  >Войти </Button>
         </Link>}
@@ -43,6 +45,7 @@ export const Header = () => {
           Корзина
         </Link>
         {commonCount >= 1 && <span className={css.commonCount}>{commonCount}</span>}
+        {loginName === "admin" && <Button onClick={()=>navigate(("/goods"))}>Все товары</Button>}
       </header>
     </div>
   );

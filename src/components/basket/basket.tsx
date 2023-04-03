@@ -4,7 +4,7 @@ import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {useEffect} from "react";
 import {fetchAddGoodInBasket, fetchGetBasket} from "../../store/slices/sliceGetBasket";
 import {GoodInBasket} from "../../types";
-import {getBasketSelector, getCommonCount} from "../../store";
+import {getBasketSelector, getCommonCount, getIsAuthSelector} from "../../store";
 import {Image, Button} from "antd";
 import {PlusOutlined, MinusOutlined} from "@ant-design/icons";
 import {Link} from "react-router-dom";
@@ -14,6 +14,7 @@ export const Basket = () => {
 
     const dispatch = useAppDispatch()
     const commonCount = useSelector(getCommonCount);
+    const isAuth = useAppSelector(getIsAuthSelector);
 
     useEffect(()=>{
         dispatch(fetchGetBasket())
@@ -29,7 +30,7 @@ export const Basket = () => {
     const deleteGoodOne = (good: GoodInBasket) => {
         dispatch(fetchAddGoodInBasket({...good, count: good.count - 1}))
     }
-        if(commonCount >= 1) {
+        if(commonCount >= 1 && isAuth) {
             return (
                 <div className={css.basket}>
                     <ul>
@@ -53,15 +54,17 @@ export const Basket = () => {
                             </li>
                         ))}
                     </ul>
+                    <Button className={css.buy}> Купить</Button>
                 </div>
             )
         }
     {
         return(
             <div>
-        <h2> В данный момент корзина пуста, добавте товар в корзину  </h2>
-                <span> Перейдите в главное меню по ссылке:<Link to=" ">Вернуться на главную</Link></span>
+                <h2> В данный момент корзина пуста, добавте товар в корзину или войдите в личный кабинет   </h2>
+                <span> Перейдите в главное меню по ссылке:<Link to="/">Вернуться на главную</Link></span>
             </div>
     )
+
     }
 }
