@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    padding: 25px;
+}
+
+.addInBasket{
+    width: 220px;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.labelCard{
+    margin: 15px;
+}
+.descriptionCard{
+    margin: 15px;
+
+}
+.priceCard{
+    margin: 15px;
+
+}
+.addedInBasket{
+
+    width: 250px;
+    border-radius: 5px;
+    margin: 30px;
+    color: #cd4500;
+}

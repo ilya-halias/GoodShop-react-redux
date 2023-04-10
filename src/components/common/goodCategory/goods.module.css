@@ -1,0 +1,26 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgb(5 145 255 / 10%);
+    max-width: 1400px;
+    padding: 10px 0;
+    text-decoration: none;
+
+
+}
+.wrapper{
+    max-width: 1440px;
+    /*background-color: aquamarine;*/
+    margin-top: 25px;
+}
+
+.goodCard {
+    max-width: 277px;
+}
